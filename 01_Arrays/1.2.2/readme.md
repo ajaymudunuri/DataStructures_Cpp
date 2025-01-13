@@ -1,0 +1,2 @@
+# Arrays - Excercise 1.2.2
+Read a group of temperature readings at each latitue (-90 to 90). Print a table of average temperature at each latitude (NO DATA if any latitude has not readings). Calculate average temperature in the northern (1 to 90) and southern (-1 to -90) hemispheres. Determine which hemisphere is warmer by taking average of all latitudes for each hemisphere for which there is data for both that latitude in each hemisphere.
