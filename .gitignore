@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+DataStructures_Cpp.code-workspace
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
