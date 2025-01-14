@@ -36,3 +36,44 @@ void arrayLib::sortArray(int arr[], int n)
         }
     }
 }
+
+twoDArrayLib::twoDArrayLib(int **arr, int row, int col)
+{
+    numRows = row;
+    numCols = col;
+
+    twoDArray = new int*[numRows];
+
+    for(int i = 0; i < numRows; i++)
+    {
+        twoDArray[i] = new int[numCols];
+        
+        for(int j = 0; j < numCols; j++)
+        {
+            twoDArray[i][j] = arr[i][j];
+        }
+    }
+}
+
+twoDArrayLib::~twoDArrayLib()
+{
+    for(int i = 0; i < numRows; i++)
+    {
+        delete[] twoDArray[i];
+    }
+    delete[] twoDArray;
+
+}
+
+void twoDArrayLib::printArray(void)
+{
+    cout << "Printing 2-D array..." << endl;
+    for (int i = 0; i < numRows; i++)
+    {
+        for (int j = 0; j < numCols; j++)
+        {
+            cout << twoDArray[i][j] << " ";
+        }
+        cout << endl;
+    }
+}

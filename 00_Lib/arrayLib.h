@@ -9,4 +9,17 @@ class arrayLib
         void sortArray(int arr[], int n);
 };
 
+class twoDArrayLib
+{
+    public:
+        twoDArrayLib(int **arr, int row, int col);
+        ~twoDArrayLib();
+        void printArray(void);
+
+    private:
+        int numRows;
+        int numCols;
+        int **twoDArray;
+};
+
 #endif // ARRAY_LIB_H
