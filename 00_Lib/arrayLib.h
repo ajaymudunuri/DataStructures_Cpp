@@ -13,16 +13,16 @@ class arrayLib
 
 class twoDArrayLib
 {
+    private:
+        int numRows;
+        int numCols;
+        int **twoDArray;
+        
     public:
         twoDArrayLib(int **arr, int row, int col);
         ~twoDArrayLib();
         void printArray(void);
         void getRow(int *arr, int rowIndex);
-
-    private:
-        int numRows;
-        int numCols;
-        int **twoDArray;
 };
 
 #endif // ARRAY_LIB_H

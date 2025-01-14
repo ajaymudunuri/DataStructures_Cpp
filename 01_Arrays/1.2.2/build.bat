@@ -1,6 +1,6 @@
 @echo off
 set "COMPILER=g++" 
-set "SOURCE_FILE=main.cpp ../../00_Lib/arrayLib.cpp" 
+set "SOURCE_FILE=main.cpp ../../00_Lib/arrayLib.cpp ../../00_Lib/fileLib.cpp" 
 set "OUTPUT_FILE=run.exe"
 
 %COMPILER% %SOURCE_FILE% -o %OUTPUT_FILE%
