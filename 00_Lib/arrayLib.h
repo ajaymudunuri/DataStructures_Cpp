@@ -8,6 +8,7 @@ class arrayLib
         void readArray(int arr[], int n);
         void sortArray(int arr[], int n);
         float getAverageOfArray(int arr[], int n);
+        bool isArrayEmpty(int arr[], int n);
 };
 
 class twoDArrayLib

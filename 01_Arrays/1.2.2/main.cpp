@@ -32,9 +32,17 @@ void printAverageTemperatureAtEachLatitude(twoDArrayLib arr, int rows, int cols)
     for(int i = 0; i < rows; i++)
     {
         arr.getRow(rowData, i);
-        cout << rowData[0] << "\t\t" << rowObj.getAverageOfArray(&rowData[1], (cols - 1)) << endl;
-    }
+        cout << rowData[0] << "\t\t";
 
+        if(rowObj.isArrayEmpty(&rowData[1], (cols - 1)))
+        {
+            cout << "NO DATA" << endl;
+        }
+        else
+        {
+            cout << rowObj.getAverageOfArray(&rowData[1], (cols - 1)) << endl;
+        }
+    }
 }
 
 int main()

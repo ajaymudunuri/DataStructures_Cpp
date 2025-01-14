@@ -53,6 +53,22 @@ float arrayLib::getAverageOfArray(int arr[], int n)
     return average;
 }
 
+bool arrayLib::isArrayEmpty(int arr[], int n)
+{
+    bool isEmpty = true;
+
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] != 0)
+        {
+            isEmpty = false;
+            break;
+        }
+    }
+
+    return isEmpty;
+}
+
 twoDArrayLib::twoDArrayLib(int **arr, int row, int col)
 {
     numRows = row;
