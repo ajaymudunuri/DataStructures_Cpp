@@ -50,8 +50,8 @@ void stackLib::printStack(void)
 {
     if(!isEmpty())
     {
-        cout << "Contents of the stack are : " << endl;
-        for(int i = 0; i < intStack.top; i++)
+        cout << "Contents of the stack are : ";
+        for(int i = 0; i <= intStack.top; i++)
         {
             cout << intStack.items[i] << "\t";
         }
