@@ -23,6 +23,20 @@ void readDataFromCsv(int **arr, unsigned int &rows, unsigned int &cols)
     }
 }
 
+void printAverageTemperatureAtEachLatitude(twoDArrayLib arr, int rows, int cols)
+{
+    arrayLib rowObj;
+
+    int rowData[cols]; 
+    cout << "Latitude\tAverage Temperature " << endl;
+    for(int i = 0; i < rows; i++)
+    {
+        arr.getRow(rowData, i);
+        cout << rowData[0] << "\t\t" << rowObj.getAverageOfArray(&rowData[1], (cols - 1)) << endl;
+    }
+
+}
+
 int main()
 {
     const unsigned int maxRows = 200;
@@ -40,13 +54,16 @@ int main()
     readDataFromCsv(array, rows, cols);
 
     twoDArrayLib twoDArray(array, rows, cols);
+    printAverageTemperatureAtEachLatitude(twoDArray, rows, cols);
+    
+
+
     
     for(int i = 0; i < maxRows; i++)
     {
         delete[] array[i];
     }
     delete[] array;
-
     
     return 0;
 }

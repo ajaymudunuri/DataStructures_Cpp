@@ -37,9 +37,9 @@ void arrayLib::sortArray(int arr[], int n)
     }
 }
 
-int arrayLib::getAverageOfArray(int arr[], int n)
+float arrayLib::getAverageOfArray(int arr[], int n)
 {
-    int average = 0;
+    float average = 0;
 
     if (n != 0)
     {
