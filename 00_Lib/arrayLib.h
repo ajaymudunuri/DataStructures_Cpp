@@ -15,6 +15,7 @@ class twoDArrayLib
         twoDArrayLib(int **arr, int row, int col);
         ~twoDArrayLib();
         void printArray(void);
+        void getRow(int *arr, int rowIndex);
 
     private:
         int numRows;

@@ -47,7 +47,7 @@ twoDArrayLib::twoDArrayLib(int **arr, int row, int col)
     for(int i = 0; i < numRows; i++)
     {
         twoDArray[i] = new int[numCols];
-        
+
         for(int j = 0; j < numCols; j++)
         {
             twoDArray[i][j] = arr[i][j];
@@ -75,5 +75,16 @@ void twoDArrayLib::printArray(void)
             cout << twoDArray[i][j] << " ";
         }
         cout << endl;
+    }
+}
+
+void twoDArrayLib::getRow(int *arr, int rowIndex)
+{
+    if(rowIndex <= numRows)
+    {
+        for(int i = 0; i < numCols; i++)
+        {
+            arr[i] = twoDArray[rowIndex][i];
+        }
     }
 }
