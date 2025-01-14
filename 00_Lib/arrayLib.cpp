@@ -37,6 +37,22 @@ void arrayLib::sortArray(int arr[], int n)
     }
 }
 
+int arrayLib::getAverageOfArray(int arr[], int n)
+{
+    int average = 0;
+
+    if (n != 0)
+    {
+        for(int i = 0; i < n; i++)
+        {
+            average += arr[i];
+        }
+        average /= n;
+    }    
+
+    return average;
+}
+
 twoDArrayLib::twoDArrayLib(int **arr, int row, int col)
 {
     numRows = row;

@@ -7,6 +7,7 @@ class arrayLib
         void printArray(int arr[], int n);
         void readArray(int arr[], int n);
         void sortArray(int arr[], int n);
+        int getAverageOfArray(int arr[], int n);
 };
 
 class twoDArrayLib
