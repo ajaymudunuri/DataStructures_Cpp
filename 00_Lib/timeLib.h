@@ -13,7 +13,7 @@ class timeLib
         timeLib();
         void startMeasurement(void);
         void stopMeasurement(void);
-        int getMeasurement(void);
+        long getMeasurement(void);
 };
 
 #endif // TIME_LIB_H

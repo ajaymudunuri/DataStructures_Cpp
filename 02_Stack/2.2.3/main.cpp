@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../../00_Lib/stackLib.h"
+#include "../../00_Lib/timeLib.h"
 using namespace std;
 
 void checkStringPattern(char string[])
@@ -29,7 +30,7 @@ void checkStringPattern(char string[])
             }
         }
     }
-
+    
     if((i == size) && (midFlag == true))
     {
         cout << "String matches the pattern" << endl;
@@ -42,10 +43,16 @@ void checkStringPattern(char string[])
 
 int main()
 {
+    timeLib time;
+    time.startMeasurement();
+    
     checkStringPattern("ABAACAABA"); // This should pass
     checkStringPattern("ABACAAABA"); // This should fail
     checkStringPattern("ABAAAABA"); // This should fail
-    checkStringPattern("ABAABACABAABA"); // This should pass   
+    checkStringPattern("ABAABACABAABA"); // This should pass
+
+    time.stopMeasurement();
+    cout << "Execution Time : " << time.getMeasurement() << "nS" << endl;
 
     return 0;
 }
