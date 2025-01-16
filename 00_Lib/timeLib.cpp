@@ -16,8 +16,8 @@ void timeLib::stopMeasurement(void)
     stopTime = high_resolution_clock::now();
 }
 
-int timeLib::getMeasurement(void)
+long timeLib::getMeasurement(void)
 {
-    high_resolution_clock::duration duration = duration_cast<microseconds>(stopTime - startTime);
+    high_resolution_clock::duration duration = (stopTime - startTime);
     return (duration.count());
 }
