@@ -77,7 +77,7 @@ char stackLib::popChar(void)
 {
     char returnValue = char(0);
 
-    if(!isEmpty())
+    if(!isEmptyChar())
     {
         returnValue = charStack.items[charStack.top];
         charStack.top--;
