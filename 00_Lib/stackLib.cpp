@@ -5,6 +5,7 @@ using namespace std;
 stackLib::stackLib(void)
 {
     intStack.top = -1;
+    charStack.top = -1;
 }
 
 bool stackLib::isEmpty(void)
@@ -54,6 +55,51 @@ void stackLib::printStack(void)
         for(int i = 0; i <= intStack.top; i++)
         {
             cout << intStack.items[i] << "\t";
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << "Stack is Empty" << endl;
+    }
+}
+
+void stackLib::pushChar(char data)
+{
+    if(charStack.top < (STACKSIZE - 1))
+    {
+        charStack.top++;
+        charStack.items[charStack.top] = data;
+    }
+}
+
+char stackLib::popChar(void)
+{
+    char returnValue = char(0);
+
+    if(!isEmpty())
+    {
+        returnValue = charStack.items[charStack.top];
+        charStack.top--;
+    }
+
+    return returnValue;
+
+}
+
+bool stackLib::isEmptyChar(void)
+{
+    return(charStack.top == -1);
+}
+
+void stackLib::printCharStack(void)
+{
+    if(!isEmptyChar())
+    {
+        cout << "Contents of the stack are : ";
+        for(int i = 0; i <= charStack.top; i++)
+        {
+            cout << charStack.items[i] << "\t";
         }
         cout << endl;
     }

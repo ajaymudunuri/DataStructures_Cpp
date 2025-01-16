@@ -9,10 +9,17 @@ struct intStackType
     int items[STACKSIZE];
 };
 
+struct charStackType
+{
+    int top;
+    char items[STACKSIZE];
+};
+
 class stackLib
 {
     private:
-        intStackType intStack; 
+        intStackType intStack;
+        charStackType charStack; 
         
     public:
         stackLib(void);
@@ -21,7 +28,10 @@ class stackLib
         int stackTop(void);
         bool isEmpty(void);
         void printStack(void);
-        
+        void pushChar(char data);
+        char popChar(void);
+        bool isEmptyChar(void);
+        void printCharStack(void);        
 };
 
 #endif //STACK_LIB_H
