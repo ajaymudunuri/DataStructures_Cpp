@@ -1,0 +1,2 @@
+# Stack - Excercise 2.2.3
+Write an algorithm to check if an input character string is of the form x C y, where x is a string consisting of letters 'A' and 'B' and where y is the reverse of x. Reach only one character at a time from the string to check
